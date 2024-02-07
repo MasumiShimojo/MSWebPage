@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Description" content="ALMAワークショップ 'ALMA-Sol-CDAW2018'">
+<meta name="Keywords" content="ALMA,太陽,mm/sub-mm波">
+<title>ALMAワークショップ ALMA-Sol-CDAW2019</title>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen,tv">
+</head>
+<body>
+<div id="wrapper">
+<div id="header">
+<!-- 見出し -->
+<h1><a href="https://alma-telescope.jp/">
+国立天文台・チリ観測所</a></h1>
+<!-- タイトル -->
+<p class="logo">ALMAワークショップ <br>ALMA-Sol-CDAW2019<br></p>
+<!-- 概要 -->
+<p class="description">2019年1月14-17日に開催されたALMA太陽データ解析ワークショップのページです。</p>
+</div>
+<!-- / header end -->
+<div id="globalnavi">
+<!-- グローバルナビゲーション -->
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="tokyo_2012.html">2012@Tokyo</a></li>
+  <li><a href="kyoto_2012.html">2012@Kyoto</a></li>
+  <li><a href="Nagoya_2015.html">2015@Nagoya</a></li>
+  <li><a href="Tokyo_2016.html">2016@Tokyo</a></li>
+  <li><a href="Tokyo_2019.html">2019@Tokyo</a></li>
+
+</ul>
+</div><!-- / globalnavi end -->
+<div id="container">
+<div id="contents">
+<!-- コンテンツ ここから -->
+<p>
+<center>
+<img border="0" src="2019_tokyo/ALMA-Sol-CDAW19.jpeg" width="80%">
+</center>
+<ul>
+<li>開催日時：2019年1月14日(月：成人の日) 13:30 ~ 1月17日(木)17:00</li>
+<li>開催場所：国立天文台・三鷹キャンパス すばる棟１階 共同利用室
+  <a href="http://www.nao.ac.jp/access/mitaka/">アクセス</a> / <a href=" http://www.nao.ac.jp/contents/access/mitaka/naoj-mitaka-map-color-201701.pdf">構内地図</a></li>
+<li>世話人(あいうえお順 敬称略)： 岡本丈典(NAOJ), 川手朋子(JAXA/ISAS), 下条圭美(NAOJ), 横山央明(東大)</li>
+</ul>
+</p>
+<p><center>本研究会は、国立天文台・アルマプロジェクトの補助を受けて実施されます。</center></p>
+
+<hr><br>
+<h2>ワークショップの概要</h2>
+
+<p>
+　2016年10月からはじまったALMA Cycle4から、ALMAによる太陽科学観測が開始されました。その後のCycle5・Cycle6においても多くの太陽観測プロポーザルが投稿されるだけでなく、Cycle4の太陽データを利用した論文がPIチームから出版されるようになりました。一方、Cycle4において取得された太陽観測データの多くがこの夏にPI占有期間をすぎ、だれでの自由に利用ができる公開データとなっています。そこで、公開ALMA-Cycle4太陽観測データをいくつかのテーマを基にデータ解析を行い、実際のALMA太陽観測データの特性を知るとともに新たなサイエンスを開拓するために、CDAW(Coordinated Data Analysis Workshop)形式のワークショップを開催します。
+</p>
+<p>
+　これまでALMA太陽観測データに触れたことがなく、干渉計データの扱いがわからない方が多いと思いますので、干渉計データの較正や像合成は事前に世話人が行います。ワークショップ期間内は、すでに作成された画像FITSファイルを基に、他波長観測データとの位置合わせ等のサイエンスに直結したデータ解析を実施します。一方、ALMA太陽観測ではサイエンス毎に像合成のための設定パラメーターが大きく異なり、自前で像合成を行う必要が生じます。ご自分で像合成を行いたい方のために、像合成を行うためのレクチャーも行う予定です。
+</p>
+<p>
+<h2>タイムテーブル</h2>
+<table>
+<tr><th>2019.01.14 (Mon)</th></tr>
+<tr><td>13:30</td><td>国立天文台三鷹キャンパスすばる棟１階共同利用室に集合</td></tr>
+<tr><td>13:30 -- 15:00</td><td>自己紹介・
+<a href='2019_tokyo/ALMA-Sol-CDAW19_Intro.pdf'>
+研究会の趣旨および解析データについて説明</a></td></tr>
+<tr><td>15:00 -- 15:15</td><td>休憩</td></tr>
+<tr><td>15:15 -- 17:00</td><td>各解析グループに別れての作戦会議および解析環境のテスト</td></tr>
+<tr><td>18:30 -- 21:30</td><td>懇親会 at
+<a href="https://tabelog.com/tokyo/A1326/A132601/13143786/">日本酒バル Tokutouseki </a></td></tr>
+<tr></tr>
+<tr><th>2019.01.15 (Tue)</th></tr>
+<tr><td>10:00 -- 12:00</td><td>
+<a href='2019_tokyo/ALMA-Sol-CDAW19_Tutorial.pdf'>
+CASAを利用した太陽画像合成レクチャー</a></td></tr>
+<tr><td>12:00 -- 13:00</td><td>昼食</td></tr>
+<tr><td>13:00 --      </td><td>データ解析</td></tr>
+<tr></tr>
+<tr><th>2019.01.16 (Wed)</th></tr>
+<tr><td>全日</td><td>データ解析</td></tr>
+<tr></tr>
+<tr><th>2019.01.17 (Thu)</th></tr>
+<tr><td>AM</td><td>データ解析</td></tr>
+<tr><td>PM</td><td>成果報告会</td></tr>
+<tr><td>16:30</td><td>終了予定</td></tr>
+</table>
+</p>
+<h2>Datasets analyzed in the workshop</h2>
+<ul>
+<li> The list of the datasets [Google Spreadsheet]:
+  <a href='https://docs.google.com/spreadsheets/d/1PQaoCmdZYuU291bk-xSrat2_E_cG8ND8hjkdL1MGnJQ/edit?usp=sharing'> ALMA-Sol-CDAW19</a>
+</li>
+</ul>
+
+<h2>Reports from the participants</h2>
+<ul>
+  <li> Plage: <a href="2019_tokyo/ALMA_CDAW_IWAI.pdf">Iwai</a>,
+              <a href="2019_tokyo/joten_almaws2019.pdf">Okamoto</a>,
+              <a href="2019_tokyo/20190117plage_kawate.pdf">Kawate</a></li>
+  <li> Active Region: <a href="2019_tokyo/nozawa_otsuji.pdf">Nozawa+Otsuji</a>,
+                      <a href="2019_tokyo/nozawa.pdf">Nozawa</a>,
+                      <a href="2019_tokyo/masuda20190117.pdf">Masuda</a></li>
+  <li> Polar Limb: <a href="2019_tokyo/yokoyama.pdf">Yokoyama</a></li>
+  <li> Equatorial Limb: <a href="2019_tokyo/ALMA-SOL-CDAW_res_Shimojo.pdf">Shimojo</a>,
+                        <a href="2019_tokyo/20190117limb_kawate.pdf">Kawate</a>,
+                        <a href="2019_tokyo/ALMA_ws2019_Denis.pdf">Denis</a></li>
+</ul>
+<h2>Photos</h2>
+<h4>Group Photo</h4>
+<center>
+The photo was taken after the summary meeting on 17 Jan. 2019.<br>
+<img border="0" src="2019_tokyo/P1010164.JPG" width="70%">
+</center>
+<h4>Other Photos</h4>
+<center>
+The photos were taken on 14 Jan. 2019.<br>
+<img border="0" src="2019_tokyo/IMG_5074.JPG" width="45%">
+<img border="0" src="2019_tokyo/IMG_5075.JPG" width="45%">
+</center>
+
+<h2>その他</h2>
+<ul>
+<li>データ解析は、像合成済みの画像FITSファイルをスタートポイントとします。そのため15日午前のCASAによる像合成レクチャー以外、CASAを利用しません。</li>
+<li>IDL+SSWの初心者講習は行いません。参加はIDL+SSWを利用できる方に限ります。</li>
+<li>2nd Circular以降は、参加申し込み者のみにサーキュラーを配布します。</li>
+</ul>
+
+<hr><br>
+<p>
+<center><font color="FF5C00">講演の発表資料の権利は、講演者が有します。</font>
+</center>
+</p>
+
+<hr><br>
+  <center>
+    <a href="https://researchers.alma-telescope.jp/j/support_programs/workshop/">
+      国立天文台・チリ観測所 "アルマワークショップ"ページに戻る。
+    </a>
+</center>
+
+
+<!-- コンテンツ ここまで -->
+</div><!-- / contents end -->
+</div><!-- / container end -->
+<div id="footer">
+<!-- コピーライト -->
+<p>Copyright &copy; National Astronomical Observatory of Japan. All Rights Reserved.</p>
+
+<!-- 削除不可 実際のブラウザ上では非表示 -->
+<p id="cds">CSS Template <a href="http://www.css-designsample.com/">CSSデザインサンプル</a></p>
+</div><!-- / footer end -->
+</div><!-- / wrapper end -->
+</body>
+</html>

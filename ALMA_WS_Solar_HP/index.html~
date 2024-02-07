@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta name="Description" content="ALMA太陽観測ワークショップ@東京">
+<meta name="Keywords" content="ALMA,太陽,mm/sub-mm波">
+<title>ALMA太陽観測ワークショップ</title>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen,tv">
+</head>
+<body>
+<div id="wrapper">
+<div id="header">
+<!-- 見出し -->
+<h1><a href="https://alma-telescope.jp/">
+国立天文台・チリ観測所</a></h1>
+<!-- タイトル -->
+<p class="logo">ALMA太陽観測ワークショップ</p>
+<!-- 概要 -->
+<p class="description">ALMA
+による太陽観測を議論するワークショップのホームページです。</p>
+</div><!-- / header end -->
+<div id="globalnavi">
+<!-- グローバルナビゲーション -->
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="tokyo_2012.html">2012@Tokyo</a></li>
+  <li><a href="kyoto_2012.html">2012@Kyoto</a></li>
+  <li><a href="Nagoya_2015.html">2015@Nagoya</a></li>
+  <li><a href="Tokyo_2016.html">2016@Tokyo</a></li>
+  <li><a href="Tokyo_2019.html">2019@Tokyo</a></li>
+  <li><a href="https://hinode.nao.ac.jp/user/shimojo/ALMA-SOL-IMG1/">2020@Oslo</a></li>
+</ul>
+</div><!-- / globalnavi end -->
+<div id="container">
+<div id="contents">
+<!-- パン屑リスト -->
+<!-- <p class="topic-path"><a href="index.html">Home</a> &gt; 無料テンプレート</p> -->
+
+<!-- コンテンツ ここから -->
+<h2>開催予定のワークショップ</h2>
+<p>
+<ul>
+<li><a href="https://hinode.nao.ac.jp/user/shimojo/ALMA-SOL-IMG1/">ALMA-SOL-IMG1@Oslo</a><br>
+2020年3月2日--5日@The Rosseland Centre for Solar Physics (RoCS), University of Oslo</li>
+</ul>
+</p>
+<h2>終了したワークショップ</h2>
+<p>
+<ul>
+<li><a href="Tokyo_2019.html">ALMA-Sol-CDAW2019＠東京</a><br>
+2019年1月14日--17日@国立天文台・三鷹キャンパス すばる棟１階 共同利用室</li>
+<li><a href="Tokyo_2016.html">
+ALMAワークショップ "Scientific Potentials of ALMA Solar Observations"</a><br>
+2017年2月23日@国立天文台・三鷹キャンパス コスモス会館会議室</li>
+<li><a href="Nagoya_2015.html">ALMAワークショップ
+「ミリ波サブミリ波による太陽研究の創成」</a><br>
+201５年2月19日@名古屋大学 ES総合館</li>
+<li><a href="kyoto_2012.html">ALMA太陽観測ワークショップ＠京都</a><br>
+2012年10月3日@京都大学・京都大学 理学部セミナーハウス</li>
+<li><a href="tokyo_2012.html">ALMA太陽観測ワークショップ＠東京</a><br>
+2012年9月4日@国立天文台・三鷹キャンパス コスモス会館会議室</li>
+</ul>
+</p>
+
+<hr><br>
+
+  <center>
+    <a href="https://researchers.alma-telescope.jp/j/support_programs/workshop/">
+      国立天文台・チリ観測所 "アルマワークショップ"ページに戻る。
+    </a>
+</center>
+
+<!-- コンテンツ ここまで -->
+</div><!-- / contents end -->
+</div><!-- / container end -->
+<div id="footer">
+<!-- コピーライト -->
+<p>Copyright &copy; National Astronomical Observatory of Japan. All Rights Reserved.</p>
+
+<!-- 削除不可 実際のブラウザ上では非表示 -->
+<p id="cds">CSS Template <a href="http://www.css-designsample.com/">CSSデザインサンプル</a></p>
+</div><!-- / footer end -->
+</div><!-- / wrapper end -->
+</body>
+</html>
