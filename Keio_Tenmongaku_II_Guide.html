@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天文学 II | 慶應義塾大学</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #00020a; /* 漆黒の宇宙 */
+            color: #e2e8f0;
+            margin: 0;
+            padding: 0;
+            font-size: 17px; /* 全体のベースサイズをアップ */
+        }
+        /* 深淵を引き立てる微細な星雲光 */
+        .nebula-bg {
+            background: radial-gradient(circle at 15% 15%, rgba(29, 78, 216, 0.12) 0%, transparent 40%),
+                        radial-gradient(circle at 85% 85%, rgba(126, 34, 206, 0.12) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+        .glass-panel {
+            background: rgba(2, 6, 23, 0.9);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+        .accent-border { border-left: 4px solid #2563eb; }
+        .accent-border-purple { border-left: 4px solid #9333ea; }
+        .accent-border-pink { border-left: 4px solid #db2777; }
+        
+        .glow-text {
+            text-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+        }
+        .keep-all {
+            word-break: keep-all;
+            overflow-wrap: break-word;
+        }
+        .phase-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        .phase-card:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(59, 130, 246, 0.2);
+        }
+        
+        /* 成績分布ドーナツグラフのスタイリング */
+        .distribution-container {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: row; 
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 3rem 2rem;
+            border-radius: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .donut-chart {
+            width: 180px; /* 少し拡大 */
+            height: 180px;
+            border-radius: 50%;
+            background: conic-gradient(
+                #3b82f6 0% 5%,      /* S */
+                #6366f1 5% 30%,     /* A */
+                #8b5cf6 30% 60%,    /* B */
+                #a855f7 60% 87%,    /* C */
+                #475569 87% 100%    /* D */
+            );
+            position: relative;
+            flex-shrink: 0;
+            box-shadow: 0 0 40px rgba(59, 130, 246, 0.2);
+        }
+        .donut-chart::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 110px;
+            height: 110px;
+            background: #020617;
+            border-radius: 50%;
+        }
+        .legend {
+            font-size: 1rem; /* 凡例の文字サイズアップ */
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+            flex-shrink: 0;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: #cbd5e1;
+        }
+        .dot { width: 16px; height: 16px; border-radius: 4px; flex-shrink: 0; }
+        
+        @media (max-width: 640px) {
+            .distribution-container {
+                flex-direction: column;
+                gap: 2.5rem;
+            }
+            .legend {
+                display: grid;
+                grid-template-cols: 1fr 1fr;
+                gap: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body class="nebula-bg min-h-screen p-6 md:p-16 flex items-center justify-center">
+
+    <div class="max-w-5xl w-full glass-panel rounded-[2.5rem] shadow-[0_0_120px_rgba(0,0,0,1)] overflow-hidden relative">
+        
+        <!-- ヘッダー -->
+        <div class="relative p-12 md:p-20 text-center border-b border-white/5">
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <div class="absolute -top-24 -left-24 w-96 h-96 bg-blue-900/10 rounded-full blur-[120px]"></div>
+                <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-purple-900/10 rounded-full blur-[120px]"></div>
+            </div>
+            
+            <p class="text-blue-500 font-bold tracking-[0.5em] text-sm mb-6 uppercase">慶應義塾大学 総合教育科目自然科学系列</p>
+            <h1 class="text-6xl md:text-8xl font-bold mb-8 glow-text tracking-tighter text-white keep-all">天文学 II</h1>
+            <p class="text-xl md:text-2xl text-blue-200/60 font-light max-w-3xl mx-auto leading-relaxed keep-all">
+                宇宙の構造と進化の物語。<br class="hidden md:block">
+                現代天文学が解き明かす、我々の存在を規定する物理的真理。
+            </p>
+        </div>
+
+        <!-- メインコンテンツ -->
+        <div class="p-10 md:p-20 space-y-24">
+            
+            <!-- セクション1：コンセプト -->
+            <section>
+                <h2 class="text-blue-400 text-sm font-bold mb-12 flex items-center gap-4 tracking-[0.3em] uppercase text-opacity-80">
+                    <span class="w-12 h-[1px] bg-blue-500/30"></span> Course Concept
+                </h2>
+                <div class="space-y-12 max-w-3xl mx-auto">
+                    <div class="accent-border pl-8">
+                        <h3 class="font-bold text-white text-2xl italic mb-3 keep-all">現代の天文学者は何をしてるのか？</h3>
+                        <p class="text-lg text-gray-400 leading-relaxed">最新鋭の望遠鏡と解析技術を駆使し、目に見えない宇宙の姿をどのようにデータとして捉え、可視化しているのか。その観測のリアルを探ります。</p>
+                    </div>
+                    <div class="accent-border-purple pl-8">
+                        <h3 class="font-bold text-white text-2xl italic mb-3 keep-all">我々は何でできているか？</h3>
+                        <p class="text-lg text-gray-400 leading-relaxed">星の誕生から終焉、そして超新星爆発へ。私たちの身体を形作る重元素が宇宙の歴史の中でいかに生成されたのか、その物質的起源を辿ります。</p>
+                    </div>
+                    <div class="accent-border-pink pl-8">
+                        <h3 class="font-bold text-white text-2xl italic mb-3 keep-all">我々はどこにいるのか？</h3>
+                        <p class="text-lg text-gray-400 leading-relaxed">銀河系からブラックホールの深淵、宇宙の大規模構造まで。広大な宇宙の地図における人類の座標を再定義します。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- セクション2：評価戦略 -->
+            <section class="bg-blue-950/20 p-10 md:p-16 rounded-[3rem] border border-blue-500/10 shadow-lg">
+                <h2 class="text-xs font-bold mb-12 text-blue-400 uppercase tracking-[0.4em] text-center">Strategy Guide / 評価の心得</h2>
+                <div class="max-w-2xl mx-auto space-y-16">
+                    <ul class="space-y-12 text-gray-300">
+                        <li class="flex items-start gap-6">
+                            <span class="text-blue-500 text-3xl font-bold">01</span>
+                            <div>
+                                <p class="text-xl font-bold text-white mb-3 keep-all">小テスト：継続が合否を分ける</p>
+                                <p class="text-base text-gray-400 italic leading-relaxed">本講義の小テストは「出席確認」を兼ねています。全14回中、9回以上の解答が単位取得の必須条件であり、解答率6割未満は不合格（D）となります。代返や他者との相談は「不正行為（停学・退学の対象）」として厳しく処分されます。講義を聴き、自力で回答する誠実さが必須です。</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-6">
+                            <span class="text-pink-500 text-3xl font-bold">02</span>
+                            <div>
+                                <p class="text-xl font-bold text-white mb-3 keep-all">成績分布：2025年度実績</p>
+                                <p class="text-base text-gray-400 leading-relaxed mb-10">
+                                    総勢600人規模(300名×2)の大人数講義だからこそ、成績評価は極めてデータドリブンで透明性が高いのが特徴です。
+                                    履修者の約3割がA評価以上を取得しますが、小テストの未達やレポートの不備による不合格者（D評価）も1割以上存在します。
+                                </p>
+                                <!-- 成績分布ドーナツグラフ -->
+                                <div class="distribution-container">
+                                    <div class="donut-chart"></div>
+                                    <div class="legend">
+                                        <div class="legend-item"><span class="dot bg-blue-500"></span> <span class="font-bold">S (5%)</span></div>
+                                        <div class="legend-item"><span class="dot bg-indigo-500"></span> <span class="font-bold">A (25%)</span></div>
+                                        <div class="legend-item"><span class="dot bg-violet-500"></span> <span class="font-bold">B (30%)</span></div>
+                                        <div class="legend-item"><span class="dot bg-purple-500"></span> <span class="font-bold">C (27%)</span></div>
+                                        <div class="legend-item"><span class="dot bg-slate-600"></span> <span class="font-bold text-gray-400">D (13%)</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-6">
+                            <span class="text-purple-500 text-3xl font-bold">03</span>
+                            <div>
+                                <p class="text-xl font-bold text-white mb-3 keep-all">レポート：宇宙を記述する思考</p>
+                                <p class="text-base text-gray-400 leading-relaxed">
+                                    期末レポートは本講義の総仕上げです。授業で扱ったデータや物理現象を、自らの言葉で論理的に再構築できているかが評価の要となります。
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- セクション3：タイムライン -->
+            <section>
+                <h2 class="text-blue-400 text-sm font-bold mb-12 flex items-center gap-4 tracking-[0.3em] uppercase text-opacity-80">
+                    <span class="w-12 h-[1px] bg-blue-500/30"></span> Mission Timeline
+                </h2>
+                <div class="space-y-8 max-w-4xl mx-auto">
+                    <div class="phase-card p-8 rounded-3xl flex flex-col md:flex-row gap-8 items-start">
+                        <span class="text-sm font-black bg-blue-600 px-4 py-1.5 rounded text-white flex-shrink-0">PHASE 01</span>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-3 italic">現代天文観測の仕組み（第1〜4回）</h3>
+                            <p class="text-lg text-gray-400">地上と宇宙の観測の利点と限界。ALMAやJWSTによる最新の観測成果とその物理的必然性を探ります。</p>
+                        </div>
+                    </div>
+                    <div class="phase-card p-8 rounded-3xl flex flex-col md:flex-row gap-8 items-start">
+                        <span class="text-sm font-black bg-purple-600 px-4 py-1.5 rounded text-white flex-shrink-0">PHASE 02</span>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-3 italic">恒星物理学と星の進化（第5〜10回）</h3>
+                            <p class="text-lg text-gray-400">HR図を通じて星の生涯を読み解き、元素の起源から太陽系外惑星の可能性へと繋げます。</p>
+                        </div>
+                    </div>
+                    <div class="phase-card p-8 rounded-3xl flex flex-col md:flex-row gap-8 items-start">
+                        <span class="text-sm font-black bg-pink-600 px-4 py-1.5 rounded text-white flex-shrink-0">PHASE 03</span>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-3 italic">銀河・宇宙の深淵（第11〜14回）</h3>
+                            <p class="text-lg text-gray-400">ブラックホールシャドウやダークマターなど、現代物理学が直面する宇宙最大の謎に迫ります。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 講師紹介 -->
+            <section class="max-w-3xl mx-auto border border-white/5 rounded-[3rem] bg-black/40 p-12 md:p-16">
+                <p class="text-xs text-gray-500 mb-6 uppercase tracking-[0.4em] text-center">Lecturer</p>
+                <div class="text-center space-y-6">
+                    <p class="text-3xl font-bold text-white tracking-wide">下条 圭美 <span class="text-lg font-light text-gray-500 ml-4 uppercase">Masumi Shimojo</span></p>
+                    <p class="text-sm text-blue-400 font-bold tracking-widest uppercase">国立天文台 准教授 / アルマプロジェクト</p>
+                    <p class="text-base text-gray-400 leading-relaxed max-w-xl mx-auto">
+                        太陽物理学および電波天文学の研究者。チリのALMA望遠鏡を用いた太陽観測手法の開発者の一人であり、講義では最前線のデータを講義に投入します。
+                    </p>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- フッター -->
+        <footer class="bg-black/60 p-12 text-center border-t border-white/5">
+            <p class="text-xs text-gray-600 tracking-[0.8em] uppercase mb-6">Astronomy II</p>
+            <div class="flex justify-center gap-16 opacity-10">
+             </div>
+        </footer>
+    </div>
+
+</body>
+</html>
